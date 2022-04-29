@@ -3,6 +3,7 @@ package tasty.common.controller;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
+import tasty.common.define.DefineStr;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -12,7 +13,7 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
 @Controller
-public class BaseController {
+public class BaseController implements DefineStr {
 
 	protected void sendResult(HttpServletResponse res, Object result) {
         try {

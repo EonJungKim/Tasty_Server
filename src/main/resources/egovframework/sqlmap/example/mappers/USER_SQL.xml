@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="User">
+
+    <select id="getUserInfo" parameterType="tasty.user.dto.LoginDTO" resultType="tasty.common.entity.UserInfoEntity">
+        SELECT *
+        FROM user_info
+        WHERE user_id = #{userId} AND user_pwd = #{userPwd};
+    </select>
+
+    <select id="getUserId" parameterType="String" resultType="String">
+        SELECT user_id
+        FROM user_info
+        WHERE user_nm = #{userNm};
+    </select>
+
+    <select id="getUserPwd" parameterType="tasty.user.dto.ChkUserPwdDTO" resultType="String">
+        SELECT user_pwd
+        FROM user_info
+        WHERE user_id = #{userId} AND user_nm = #{userNm};
+    </select>
+
+    <insert id="regUserInfo" parameterType="tasty.user.dto.RegUserInfoDTO">
+        INSERT INTO user_info (user_id, user_pwd, user_nm, reg_date)
+        VALUES (#{userId}, #{userPwd}, #{userNm}, CURRENT_DATE);
+    </insert>
+
+    <update id="udtUserInfo" parameterType="tasty.user.dto.UdtUserInfoDTO">
+        UPDATE user_info
+        SET user_pwd = #{userPwd}
+        WHERE idx = ${idx};
+    </update>
+
+    <delete id="delUserInfo" parameterType="String">
+        DELETE FROM user_info
+        WHERE user_id = #{userId};
+    </delete>
+</mapper>

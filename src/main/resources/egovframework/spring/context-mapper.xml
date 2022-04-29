@@ -10,8 +10,12 @@
 	</bean>
 
 	<!-- MapperConfigurer setup for MyBatis Database Layer with @Mapper("deptMapper") in DeptMapper Interface -->
- 	<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
+ 	<!--<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
 		<property name="basePackage" value="egovframework.example.sample.service.impl" />
+	</bean>-->
+
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSession"/>
 	</bean>
     
 </beans>

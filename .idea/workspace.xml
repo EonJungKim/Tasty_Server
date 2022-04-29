@@ -10,17 +10,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af9fc2df-67cf-47af-97b1-0469b96ece2f" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/vo/StatusVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/controller/MapController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dao/MapDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/service/MapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/service/impl/MapServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/dao/AbstractDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/define/DefineStr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/entity/FileDtlEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/entity/FileMngEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/entity/MenuInfoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/entity/RstntInfoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/entity/UserInfoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/util/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/util/Paging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/common/util/StrUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dto/LatLngDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dto/RegMenuInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dto/RegRstntInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dto/UdtMenuInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dto/UdtRstntInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/user/dto/ChkUserPwdDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/user/dto/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/user/dto/RegUserInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasty/user/dto/UdtUserInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/egovframework/props/globals.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/egovframework/sqlmap/example/mappers/MAP_SQL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/egovframework/sqlmap/example/mappers/USER_SQL.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tasty/common/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/common/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/common/vo/StatusVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/common/dto/StatusDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/map/controller/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/map/controller/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/map/dao/MapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/map/dao/MapDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/map/service/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/map/service/MapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/map/service/impl/MapServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/map/service/impl/MapServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tasty/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/user/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasty/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasty/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-aspect.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-aspect.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-common.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-common.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-datasource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-datasource.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-sqlMap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/egovframework/spring/context-sqlMap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/egovframework/sqlmap/example/sql-mapper-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/egovframework/sqlmap/example/sql-mapper-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,11 +115,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/tasty/common/util" />
     <property name="project.structure.last.edited" value="아티팩트" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showLigatures" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\source\IntelliJProjects\Tasty_Server\src\main\java\tasty\common\util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tasty.common.dao" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.69" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.69" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -199,11 +240,30 @@
       <workItem from="1645233618108" duration="816000" />
       <workItem from="1645250523122" duration="70000" />
       <workItem from="1645250597855" duration="13000" />
-      <workItem from="1645253977313" duration="5576000" />
+      <workItem from="1645253977313" duration="6878000" />
+      <workItem from="1647409482494" duration="522000" />
+      <workItem from="1648260755385" duration="17016000" />
+      <workItem from="1648431954510" duration="1255000" />
+      <workItem from="1649218501335" duration="1442000" />
+      <workItem from="1650985763653" duration="2860000" />
+      <workItem from="1651116459180" duration="228000" />
+      <workItem from="1651206546097" duration="616000" />
     </task>
+    <task id="LOCAL-00001" summary="* 공통&#10; - BaseController의 API Response 전송 Method 정의&#10; - BaseController에서 File을 Byte[]로 전송하는 Method 정의&#10; - DTO, VO 간소화를 위한 Lombok Library를 POM에 추가&#10; - Object를 JSON 형식으로 전송하기 위한 Gson Library 추가">
+      <created>1645403005675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645403005675</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="* 공통&#10; - BaseController의 API Response 전송 Method 정의&#10; - BaseController에서 File을 Byte[]로 전송하는 Method 정의&#10; - DTO, VO 간소화를 위한 Lombok Library를 POM에 추가&#10; - Object를 JSON 형식으로 전송하기 위한 Gson Library 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="* 공통&#10; - BaseController의 API Response 전송 Method 정의&#10; - BaseController에서 File을 Byte[]로 전송하는 Method 정의&#10; - DTO, VO 간소화를 위한 Lombok Library를 POM에 추가&#10; - Object를 JSON 형식으로 전송하기 위한 Gson Library 추가" />
   </component>
 </project>

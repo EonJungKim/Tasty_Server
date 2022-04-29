@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Map">
+
+    <select id="getRstntLocList" parameterType="tasty.map.dto.LatLngDTO">
+        SELECT idx, rstnt_nm, rstnt_cat, rstnt_phn, rstnt_adr
+        FROM rstnt_info
+        WHERE ST_DWithin(ST_GeomFromText('POINT (' || ${lat} || ' ' || ${lng} || ')'), 100);
+    </select>
+
+    <select id="getRstntInfo" parameterType="Integer" resultType="tasty.common.entity.RstntInfoEntity">
+        SELECT idx, rstnt_nm, rstnt_cat, rstnt_phn, rstnt_adr,
+               off_date, memo, reg_date, udt_date, ST_AsText(geom) AS geom
+        FROM rstnt_info
+        WHERE idx = ${idx};
+    </select>
+
+    <insert id="regRstntInfo" parameterType="tasty.map.dto.RegRstntInfoDTO">
+        INSERT INTO rstnt_info (rstnt_nm, rstnt_cat, rstnt_phn, rstnt_adr, off_date,
+                                memo, reg_date, geom)
+        VALUES (#{rstntNm}, #{rstntCat}, #{rstntPhn}, #{rstntAdr}, #{offDate},
+                #{memo}, CURRENT_DATE, ST_GeomFromText('POINT(' || ${lng} || ' ' || ${lat} || ')'));
+    </insert>
+
+    <update id="udtRstntInfo" parameterType="tasty.map.dto.UdtRstntInfoDTO">
+        UPDATE rstnt_info
+        SET rstnt_nm = #{rstntNm}, rstnt_cat = #{rstnt_cat},
+            rstnt_phn = #{rstntPhn}, rstnt_adr = #{rstntAdr},
+            off_date = #{offDate}, memo = #{memo},
+            udt_date = CURRENT_DATE, geom = ST_GeomFromText('POINT(' || ${lng} || ' ' || ${lat} || ')')
+        WHERE idx = ${idx};
+    </update>
+
+    <delete id="delRstntInfo" parameterType="Integer">
+        DELETE FROM rstnt_info
+        WHERE idx = ${idx};
+    </delete>
+
+    <select id="getMenuList" parameterType="Integer">
+        SELECT idx, menu_nm, menu_prc, MAX(file.idx) AS file_idx
+        FROM menu_info menu LEFT JOIN file_dtl file ON menu.file_grp = file.file_grp
+        WHERE rstnt_idx = ${rstntIdx};
+    </select>
+
+    <select id="getMenuInfo" parameterType="Integer" resultType="tasty.common.entity.MenuInfoEntity">
+        SELECT *
+        FROM menu_info
+        WHERE idx = ${idx};
+    </select>
+
+    <insert id="regMenuInfo" parameterType="tasty.map.dto.RegMenuInfoDTO">
+        INSERT INTO menu_info (rstnt_idx, menu_nm, menu_prc, file_grp, reg_date)
+        VALUES (${rstntIdx}, #{menuNm}, ${menuPrc}, ${fileGrp}, CURRENT_DATE);
+    </insert>
+
+    <update id="udtMenuInfo" parameterType="tasty.map.dto.UdtMenuInfoDTO">
+        UPDATE menu_info
+        SET menu_nm = #{menuNm}, menu_prc = ${menuPrc}, udt_date = CURRENT_DATE
+        WHERE idx = ${idx};
+    </update>
+
+    <delete id="delMenuInfo" parameterType="Integer">
+        DELETE FROM menu_info
+        WHERE idx = ${idx};
+    </delete>
+</mapper>
