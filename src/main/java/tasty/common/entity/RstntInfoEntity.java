@@ -6,12 +6,12 @@ import lombok.ToString;
 @Getter @ToString
 public class RstntInfoEntity {
 
-    private int idx;
-    private String rstntNm;
-    private String rstntCat;
-    private String rstntPhn;
-    private String rstntAdr;
-    private String offDate;
-    private String memo;
-    private String geom;
+    private int idx;            // 식당 순번
+    private String rstntNm;     // 상호명
+    private String rstntCat;    // 식당 분류
+    private String rstntPhn;    // 전화번호
+    private String rstntAdr;    // 주소
+    private String offDate;     // 휴일
+    private String memo;        // 메모
+    private String geom;        // 좌표
 }

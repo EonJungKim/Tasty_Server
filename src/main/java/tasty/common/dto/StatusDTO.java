@@ -16,6 +16,7 @@ public class StatusDTO {
 
     public StatusDTO(HttpStatus resultCd) {
         this.resultCd = resultCd;
+        this.resultMsg = "";
     }
 
     public StatusDTO(HttpStatus resultCd, String resultMsg) {

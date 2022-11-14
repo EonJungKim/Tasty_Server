@@ -6,8 +6,8 @@ import lombok.ToString;
 @Getter @ToString
 public class FileMngEntity {
 
-    private int fileGrp;
-    private String prpCde;
-    private String regDate;
-    private String udtDate;
+    private int fileGrp;        // 파일 관리번호
+    private String prpCde;      // 파일 용도
+    private String regDate;     // 등록일
+    private String udtDate;     // 수정일
 }

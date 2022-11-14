@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/user")
 public class UserController extends BaseController {
 
-	@Resource(name = "UserService")
+	@Resource(name = "userService")
 	private UserService userService;
 
 	@RequestMapping(value = "login.do", method = RequestMethod.GET)

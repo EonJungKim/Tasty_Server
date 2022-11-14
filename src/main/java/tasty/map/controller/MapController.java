@@ -22,10 +22,10 @@ import java.util.List;
 @RequestMapping("/map")
 public class MapController extends BaseController {
 
-    @Resource(name = "MapService")
+    @Resource(name = "mapService")
     private MapService mapService;
 
-    @RequestMapping(value = "/rstntLocList", method = RequestMethod.GET)
+    @RequestMapping(value = "/rstntLocList.do", method = RequestMethod.GET)
     public void getRstntLocList(HttpServletResponse res, @ModelAttribute LatLngDTO latLngDTO) {
         JSONObject result = new JSONObject();
 
@@ -44,7 +44,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/rstntInfo", method = RequestMethod.GET)
+    @RequestMapping(value = "/rstntInfo.do", method = RequestMethod.GET)
     public void getRstntInfo(HttpServletResponse res, @RequestParam(value="idx") int idx) {
         JSONObject result = new JSONObject();
 
@@ -63,7 +63,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/rstntInfo", method = RequestMethod.POST)
+    @RequestMapping(value = "/rstntInfo.do", method = RequestMethod.POST)
     public void regRstntInfo(HttpServletResponse res, @ModelAttribute RegRstntInfoDTO regRstntInfoDTO) {
         JSONObject result = new JSONObject();
 
@@ -77,7 +77,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/rstntInfo", method = RequestMethod.PUT)
+    @RequestMapping(value = "/rstntInfo.do", method = RequestMethod.PUT)
     public void udtRstntInfo(HttpServletResponse res, @ModelAttribute UdtRstntInfoDTO udtRstntInfoDTO) {
         JSONObject result = new JSONObject();
 
@@ -91,7 +91,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/rstntInfo", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/rstntInfo.do", method = RequestMethod.DELETE)
     public void delRstntInfo(HttpServletResponse res, @RequestParam(value="idx") int idx) {
         JSONObject result = new JSONObject();
 
@@ -105,7 +105,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/menuList", method = RequestMethod.GET)
+    @RequestMapping(value = "/menuList.do", method = RequestMethod.GET)
     public void getMenuList(HttpServletResponse res, @RequestParam(value="rstntIdx") int rstntIdx) {
         JSONObject result = new JSONObject();
 
@@ -124,7 +124,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/menuInfo", method = RequestMethod.GET)
+    @RequestMapping(value = "/menuInfo.do", method = RequestMethod.GET)
     public void getMenuInfo(HttpServletResponse res, @RequestParam(value="idx") int idx) {
         JSONObject result = new JSONObject();
 
@@ -143,7 +143,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/menuInfo", method = RequestMethod.POST)
+    @RequestMapping(value = "/menuInfo.do", method = RequestMethod.POST)
     public void regMenuInfo(HttpServletResponse res, @ModelAttribute RegMenuInfoDTO regMenuInfoDTO) {
         JSONObject result = new JSONObject();
 
@@ -157,7 +157,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/menuInfo", method = RequestMethod.PUT)
+    @RequestMapping(value = "/menuInfo.do", method = RequestMethod.PUT)
     public void udtMenuInfo(HttpServletResponse res, @ModelAttribute UdtMenuInfoDTO udtMenuInfoDTO) {
         JSONObject result = new JSONObject();
 
@@ -171,7 +171,7 @@ public class MapController extends BaseController {
         sendResult(res, result);
     }
 
-    @RequestMapping(value = "/menuInfo", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/menuInfo.do", method = RequestMethod.DELETE)
     public void delMenuInfo(HttpServletResponse res, @RequestParam(value="idx") int idx) {
         JSONObject result = new JSONObject();
 

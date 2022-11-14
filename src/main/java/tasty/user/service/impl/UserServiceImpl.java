@@ -11,7 +11,7 @@ import tasty.user.service.UserService;
 
 import javax.annotation.Resource;
 
-@Service("UserService")
+@Service("userService")
 public class UserServiceImpl implements UserService {
 
     @Resource(name="UserDAO")

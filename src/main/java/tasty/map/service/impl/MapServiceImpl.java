@@ -10,7 +10,7 @@ import tasty.map.service.MapService;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Service("MapService")
+@Service("mapService")
 public class MapServiceImpl implements MapService {
 
     @Resource(name="MapDAO")
